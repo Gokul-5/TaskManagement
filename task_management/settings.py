@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # created apps
+    'rest_framework', #for REST API
     'tasks', #for task management
     'users', #for user authentication
 ]
