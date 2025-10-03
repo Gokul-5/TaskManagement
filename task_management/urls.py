@@ -7,7 +7,8 @@ def home(request):
     "please visit /api/tasks/ to take a look at what Gokul has done!"})
 
 urlpatterns = [
-    path('', home, name='home'),
     path('admin/', admin.site.urls),
-    path('api/', include('tasks.urls')),
+    path('api/tasks/', include('tasks.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+
 ]

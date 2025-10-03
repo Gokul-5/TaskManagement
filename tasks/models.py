@@ -8,7 +8,7 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    user=models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks')
+    user=models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True, related_name='tasks')
 
     def __str__(self):
         return self.title
